@@ -1,0 +1,247 @@
+---
+author: 
+    - name: Dr. Shamar L. Stewart
+      institute: Virginia Tech
+date: "Spring 2024"
+title: "AAEC 4804, STAT 4804, AAEC 5804G  - Fundamentals of Econometrics"
+
+output:
+  pdf_document:
+    keep_tex: no
+    template: "../../../Templates/Template_full.tex"
+geometry: "left=2cm,right=2cm,top=2cm,bottom=2cm"
+
+email: stewartls@vt.edu
+web: "github.com/shamar-stewart/metrics-S25"
+office: "202-B Hutcheson Hall"
+officehours: "M 1:00  -- 2:00 PM **OR** *by Appointment - please feel free to email*"
+classroom: 'PAM 1001'
+classhours: "MW 4:00 -- 5:15 PM"
+
+TA: "Mr. William (Nic) McWilliams"
+TA_email: wnm007@vt.edu
+TA_officehours: "T 2:00 -- 3:00 PM"
+TA_office: "HUTCH 319B"
+
+params: 
+  grad: TRUE
+
+fontfamily: helvet
+fontsize: 10pt
+
+header_include:
+  -\newcommand\bblue[1]{\textcolor{blue}{\textbf{#1}}}
+---
+
+```{r setup, include=FALSE, cache=F, message=F, warning=F, results="hide"}
+knitr::opts_chunk$set(cache=FALSE)
+knitr::opts_chunk$set(warning=F, message=F)
+# knitr::opts_knit$get(kable.force.latex = TRUE)
+
+```
+
+# Course Description
+
+This course is designed to provide advanced undergraduates and graduate student with a solid foundation in the fundamentals principles and techniques of descriptive and inferential economics. The course will cover the basic principles of econometrics, including the nature of econometrics and economic data, simple and multiple regression analysis, issues in using OLS with time series data, panel models, and instrumental variables. Although we will focus on the applied aspect of econometrics, we will also cover the theoretical underpinnings of the models and techniques discussed. The course goes beyond
+the rudimentary mechanics of regression analysis by covering the consequences for inference and hypothesis testing of making various kinds of specification errors.
+
+# Prerequisites
+
+```{r, echo = FALSE, results="asis"}
+cat(" For STAT 4804, AAEC 4804: AAEC1005/1006; STAT 3005/3604.\n
+For AAEC 5804G: Graduate Standing.")
+```
+
+# Textbooks
+
+*Required:* 
+
+- [Introductory Econometrics: A Modern Approach, 7th ed.](https://www.cengage.com/c/introductory-econometrics-7e-wooldridge/9781337558860/) by Jeff Wooldridge, Cengage Learning
+
+    Please feel free to purchase an earlier edition but **you are responsible for ensuring that the content is the same** as in the 7th edition. 
+
+*Reference Books:*
+
+- [Using R for Introductory Econometrics](https://www.routledge.com/Using-R-for-Introductory-Econometrics/Chiang/p/book/9780367333280) by Florian Heiss and J. Scott Holleran. 
+
+    You can obtain a **free** PDF copy at <http://www.urfie.net/>. RIE is helful companion to Wooldridge's text as it provides a practical guide to using `R` for econometric analysis.
+
+- [R for Data Science](https://r4ds.had.co.nz/) by Hadley Wickham and Garrett Grolemund. 
+
+    This book is a great resource for learning `R` and `R Markdown` (more discussion later). It is especially focused on data data wrangling and visualization. It is available for **free** online.
+
+
+# Software & Datacamp
+
+**R & R Studio**: Econometric analyses will be done in the `R` language and software. You download `R` for free by going to <https://posit.co/download/rstudio-desktop/>.
+
+You will need to download the latest version of `R` and `RStudio` for your operating system. `RStudio` is a great code editor that interfaces with `R` and provides a more interactive experience, especially for new users.
+
+**Datacamp**: Datacamp is a learning platform that offers instruction on various programming languages. Through videos and hands-on-the-keyboard exercises, you will be able to improve your proficiency in `R` and other programming languages.
+
+I have requested six months of premium access to Datacamp (<https://www.datacamp.com/>) for all students enrolled in this course. Please feel free to use this resource to improve your coding skills or even learn a new language. I might sporadically assign some exercises to help you practice the concepts covered in class.
+
+# Grading Policy
+
+This section of the syllabus details multiple policies that will be implemented in this class throughout the semester. Continued enrollment in this class constitutes acceptance of the terms outlined in this document.
+
+### Grading Components
+
+Your assessments for this course are as follows:
+
+\begin{center}
+%\begin{tabular}{ |c{1cm}|c{1cm}  }
+\small
+\begin{tabular}{lcc} 
+ \toprule
+ & AAEC 5804G & AAEC (STAT) 4804 \\
+\midrule
+ Exam \#1 & 25 & 30\\ 
+ Exam \#2 & 25 & 30\\ 
+ Project Presentation & 20 & --\\
+ Assignments & 30 & 40\\ 
+ \bottomrule
+\end{tabular}
+\end{center}
+
+Your letter grades will be assigned as follows:
+
+```{r, echo = FALSE, results="asis"}
+cat("
+|AAEC 4804, STAT 4804 | A >= 85 | B 70-84 | C 60-69 | D 50-59 | F <50 |
+:---------------------|:------:|:------:|:------:|:------:|:-----:
+|AAEC 5804G | A >= 90 | B 80-89 | C 70-79 | D 60-69 | F <60 
+")
+```
+
+I will **ROUND UP** your final grades but please do not anticipate any further grade adjustments!
+
+### Assignments
+
+To develop competence in econometrics, you will need "hands-on" experience. As such, your assignments will test your ability to apply the theoretical concepts discussed in class to real-world data. Your assignments will involve both derivations and programming exercises.
+
+The assignments are given on CANVAS and you are required to submit your answers electronically there as well. The due date of each assignment will be given at the time the assignment is announced. Late assignments are **NOT ACCEPTABLE**, and will receive a grade of 0.
+
+Students are strongly encouraged to work on the homework assignments in groups. However, each student must independently write their own solutions for turning in. The honor code is fully enforced and all students who resort to submitting “copycat” assignments will receive a zero for the assignment.
+
+Lastly, all assignments must be submitted as a `pdf` compiled using `RMarkdown`. I will discuss how to use this aspect of `R` during class. Additional resources such as `Tutorials`, and `Cheatsheets` can be found using the *Learn R Markdown* website at <https://rmarkdown.rstudio.com/docs/articles/rmarkdown.html>.
+
+### Make-Up Exam Policy
+
+There are **NO** make-ups for missed exams.
+
+```{r, echo = FALSE, results="asis"}
+cat("
+### Final Paper
+
+Students are required to carry out a short term paper. In general, the project will serve to reinforce the topics and techniques explored in the course. 
+
+Upon consultation with and approval from the instructor, students are free to pursure one of the following options:
+
+1. **Empirical Analysis**: Students will be required to collect data and apply the techniques discussed in class to analyze the data. It is the expectation, however, that students will go beyond the methods and techniques discussed in class. 
+
+    This paper will take the form of a scholarly article of about 10-12 pages (11pt, double-spaced, including references, tables, and figures). Your intention should be that inevitably this might lead to a publishable paper in an area of interest to you.
+
+    The paper should include the following sections:
+
+    1. Abstract
+    2. Introduction & Brief Review of Relevant Literature
+    2. Methodology/Empirical Model
+    3. Discussion of Findings
+    4. Conclusion & Policy Implications & Limitations
+    5. References
+
+    Important elements to consider when writing this paper should include:
+
+    - Discussion of the problem being explored. Ensure that you are able to relate this back to the data.
+    - Discussion of the procedures you used to analyze the data; the model(s) you employed, etc.
+    - One or more graphs or tables presenting the data/results of the analysis.
+    - Analysis of the results. Discussion of economic ans statistical significance.
+    - The policy implications of the analysis?
+      - What are the limitations of the analysis? 
+      - Why should anyone care? What has been learned?
+  
+2. **Replication Study**: Alternatively, students can choose to replicate a study from the literature. If students choose this option, the aim is to replicate the study as closely as possible. Additionally, they must provide a meaningful discussion of the results and implications of the study as well as extend the study in some meaningful way. This could involve some combination of using a different dataset, different econometric techniques, extending the time period, etc.  The formatting requirements of the paper will be the same as the empirical analysis paper above.
+
+    To reduce formatting issues, I will provide a R Markdown template for your papers.
+")
+```
+
+## Regrades
+
+If you feel that you were unfairly graded on any assessment, you have until the subsequent class period after the assignment is returned to submit a re-grade request. Requesting a re-grade in no way assures you will receive additional points.
+
+Lastly, if you have questions about the material being covered, your performance in the course or related concerns, please meet with me, **as soon as possible**, during office hours, or arrange an appointment by email. For help with course content, you can also contact the TA, Mr. McWilliams.
+
+## Attendance and Participation Policy
+
+There is no mandatory attendance requirement for this class. You are responsible for your own success, and failure. In my experience, and empirical studies would prove, there is a high correlation between students’ attending classes regularly and performing well in university courses.
+
+Students need to be active participants in this course. This involves attending classes regularly, asking and answering questions, and participating in class discussions. It is your responsibility to obtain any handouts, assignments or information given during a missed class period. Any student who is unable to attend class regularly, regardless of the reason or circumstance, should withdraw from the class before poor attendance interferes with his/her ability to achieve the course objectives.
+
+**Students are strongly advised to set up office hours appointments (with the TA and/or me) the moment they sense that they are falling behind. Do not wait until the end of the semester to do so if such problems arise. I am unable to help you then!**
+
+## Cellphone/Computer Usages
+
+If you need to speak or correspond via email or text please excuse yourself quietly and conduct your business outside. Otherwise, be respectful of other students: **turn your cellphones to vibrate during the class and do not text in class.**
+
+I would normally ban the use of laptops in class but the nature of this class requires that students follow along with scripts and lectures on their laptops. For these purposes, I will allow their use in class. If any such device is seen being used for any other purpose, you will lose this privilege and will not be permitted to use them during subsequent classes.
+
+## Wellness Principles
+
+We all have a duty to protect ourselves and one another. Thus, by participating in this class, all students agree to abide by the Virginia Wellness principles. If you are exhibiting signs of illness, notify me by email and stay home. You agree to also follow the instructions posted at <https://www.vt.edu/public-health.html>. **Please take the necessary precautions to protect yourself and others around you.**
+
+## ADA Policy
+
+The Americans with Disabilities Act (ADA) is a federal anti-discrimination statute that provides comprehensive civil rights protection for persons with disabilities. If you believe you have a disability requiring an accommodation, please contact the Services for Students with Disabilities (SSD) at (540) 231-3788 (30 Old Turner St) or visit <https://ssd.vt.edu>. After the initial arrangements are made with that office, please contact the instructor.
+
+### Additional Student Support Resources 
+Undergrads: <https://students.vt.edu/contact.html>    
+Graduates: <https://graduateschool.vt.edu/student-services.html>
+
+## Academic Dishonesty Policy
+
+Please note that the Virginia Tech honor code applies to all graded assessments in this course. Moreover, the Department of Agricultural & Applied Economics has a zero tolerance policy towards acts of academic misconduct. Violations of the Honor Code will result in a grade of F in the course. For more information, please visit <http://www.honorsystem.vt.edu>
+
+
+# Tentative Course Outline
+
+The following is a tentative schedule of topics to be covered in this course. The schedule is subject to change based on the pace of the class and the needs of the students. Any such changes will be announced in class and updated on the course website.
+\vspace{-0.08\baselineskip}
+\begin{minipage}{\textwidth}
+\begin{flushleft}
+\textbf{Introduction}\\
+1(a)  The Nature of Econometrics \& Economic Data\dotfill Chapter 1\\
+1(b) Introduction to R \& RMarkdown \\
+\vspace{\baselineskip}
+\textbf{PART I. Regression Analysis with Cross-Sectional Data}\\
+\vspace{0.5\baselineskip}
+2. Simple (Univariate) Linear Regression Model \dotfill Chapter 2\\
+3. Multiple Regression Analysis: Estimation \dotfill Chapter 3\\
+4. Multiple Regression Analysis: Inference (Hypothesis Testing)  \dotfill Chapter 4\\
+5. Multiple Regression Analysis: OLS Asymptotics \dotfill Chapter 5\\
+6. Multiple Regression Analysis: Further Issues \dotfill Chapter 6\\
+7. Multiple Regression Analysis with Qualitative Information \dotfill Chapter 7\\
+8. (Testing for \& Correcting) Heteroskedasticity \dotfill Chapter 8\\
+9. Functional Form (Mis)Specification \dotfill Chapter 9\\
+\vspace{\baselineskip}
+\textbf{PART II. Regression Analysis with Time Series Data}\\
+\vspace{0.5\baselineskip}
+10. Basic Regression Analysis with Time Series Data \dotfill Chapter 10\\
+11. Issues in Using OLS with Time Series Data: Brief Review \dotfill Chapter 11\\
+12. Serial Correlation and Heteroskedasticity in Time Series Regressions \dotfill Chapter 12\\
+\vspace{\baselineskip}
+\textbf{PART III. Panel Models \& IVs}\\
+\vspace{0.5\baselineskip}
+13. Pooling Cross Sections across Time: Simple Panel Data Methods \dotfill Chapter 13\\
+14. Advanced Panel Data Methods: Fixed vs. Random Effect \dotfill Chapter 14\\
+15. Instrumental Variables \dotfill Chapter 15\\
+% \vspace{\baselineskip}
+% \textit{Time Permitting}\\
+% Logit and Probit Models for Binary Response \dotfill Chapter 7\\
+% \textbf{Models for Panel Data if time permits}\\
+% Statistical Inference \dotfill Chapter 14\\
+\vspace*{.1in}
+
+\end{flushleft}
+\end{minipage}
