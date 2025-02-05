@@ -6,7 +6,7 @@ This is the landing page for Introductory and Fundamental Econometrics. I will u
 
 | Topic                                	                        |  Readings                            	                        | Remarks                                                       |
 |:--------------------------------------------------------------|:--------------------------------------------------------------|:--------------------------------------------------------------|
-|1(a) The Nature of Econometrics & Economic Data|        [Chapter 1](Lecture/L1/L1_Intro.pdf)| 
+|1(a) The Nature of Econometrics & Economic Data|        [Chapter 1](Lecture/L1/L1_Intro.pdf)| HW 0.1 -- ggplot2: Due Feb 3, 2025, 11:59 PM <br> HW 0.2 -- Intro to R: Due Feb 3, 2025, 11:59 PM <br> HW 0.3 -- Tidyverse: Due Feb 5, 2025, 11:59 PM     
 |1(b) Introduction to R & RMarkdown| | [See Homework Solution Templates Here](Homework/HW_Template)
 |**PART I. Regression Analysis with Cross-Sectional Data**| |
 |2. Simple (Univariate) Linear Regression Model |[Chapter 2](Lecture/L2/L2_Simple_Regression.pdf)|  [HW1 pdf](Homework/HW1-Empty.pdf) <br> [HW1 RMD](Homework/HW1-Empty.rmd) <br> Due Feb 12
