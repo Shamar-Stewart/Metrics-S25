@@ -10,7 +10,7 @@ This is the landing page for Introductory and Fundamental Econometrics. I will u
 |1(b) [Introduction to R & RMarkdown](https://htmlpreview.github.io/?https://github.com/Shamar-Stewart/Metrics-S25/blob/main/Lecture/L1/RMarkdown_Intro.html)| | [See Homework Solution Templates Here](Homework/HW_Template)
 |**PART I. Regression Analysis with Cross-Sectional Data**| |
 |2. Simple (Univariate) Linear Regression Model |[Chapter 2](Lecture/L2/L2_Simple_Regression.pdf)|  [HW1 pdf](Homework/HW1-Empty.pdf) <br> [HW1 RMD](Homework/HW1-Empty.rmd) <br> Due Feb 12
-|3. Multiple Regression Analysis: Estimation | [Chapter 3](Lecture/L3/L3_Multiple_Regression.pdf)|HW2 pdf <br> HW2 RMD <br> Forthcoming
+|3. Multiple Regression Analysis: Estimation | [Chapter 3](Lecture/L3/L3_Multiple_Regression.pdf)|HW2 pdf; HW2 RMD <br> Forthcoming
 |4. Multiple Regression Analysis: Inference (Hypothesis Testing) | Chapter 4|
 |5. Multiple Regression Analysis: OLS Asymptotics | Chapter 5|
 |6. Multiple Regression Analysis: Further Issues |  Chapter 6|
