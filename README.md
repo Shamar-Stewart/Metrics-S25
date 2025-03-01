@@ -9,7 +9,7 @@ This is the landing page for Introductory and Fundamental Econometrics. I will u
 |1(a) The Nature of Econometrics & Economic Data|        [Chapter 1](Lecture/L1/L1_Intro.pdf)| HW 0.1 -- ggplot2: Due Feb 3, 2025, 11:59 PM <br> HW 0.2 -- Intro to R: Due Feb 3, 2025, 11:59 PM <br> HW 0.3 -- Tidyverse: Due Feb 5, 2025, 11:59 PM     
 |1(b) [Introduction to R & RMarkdown](https://htmlpreview.github.io/?https://github.com/Shamar-Stewart/Metrics-S25/blob/main/Lecture/L1/RMarkdown_Intro.html)| | [See Homework Solution Templates Here](Homework/HW_Template)
 |**PART I. Regression Analysis with Cross-Sectional Data**| |
-|2. Simple (Univariate) Linear Regression Model |[Chapter 2](Lecture/L2/L2_Simple_Regression.pdf)|  [HW1 pdf](Homework/HW1/HW1-Empty.pdf) <br> [HW1 RMD](Homework/HW1/HW1-Empty.rmd) <br> Due Feb 12
+|2. Simple (Univariate) Linear Regression Model |[Chapter 2](Lecture/L2/L2_Simple_Regression.pdf)|  [HW1 pdf](Homework/HW1/HW1-Empty.pdf); [HW1 RMD](Homework/HW1/HW1-Empty.rmd) <br> Due Feb 12
 |3. Multiple Regression Analysis: Estimation | [Chapter 3](Lecture/L3/L3_Multiple_Regression.pdf)|[HW2 pdf](Homework/HW2/AAEC4804_STAT4804_AAEC5804G_HW2-S25_Empty.pdf); [HW2 RMD](Homework/HW2/AAEC4804_STAT4804_AAEC5804G_HW2-S25_Empty.Rmd) <br> Due March 10
 |4. Multiple Regression Analysis: Inference (Hypothesis Testing) | Chapter 4|
 |5. Multiple Regression Analysis: OLS Asymptotics | Chapter 5|
