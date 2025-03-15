@@ -11,8 +11,8 @@ This is the landing page for Introductory and Fundamental Econometrics. I will u
 |**PART I. Regression Analysis with Cross-Sectional Data**| |
 |2. Simple (Univariate) Linear Regression Model |[Chapter 2](Lecture/L2/L2_Simple_Regression.pdf)|  [HW1 pdf](Homework/HW1/HW1-Empty.pdf); [HW1 RMD](Homework/HW1/HW1-Empty.rmd) <br> Due Feb 12
 |3. Multiple Regression Analysis: Estimation | [Chapter 3](Lecture/L3/L3_Multiple_Regression.pdf)|[HW2 pdf](Homework/HW2/AAEC4804_STAT4804_AAEC5804G_HW2-S25_Empty.pdf); [HW2 RMD](Homework/HW2/AAEC4804_STAT4804_AAEC5804G_HW2-S25_Empty.Rmd) <br> Due March 10
-|4. Multiple Regression Analysis: Inference (Hypothesis Testing) | Chapter 4|
-|5. Multiple Regression Analysis: OLS Asymptotics | Chapter 5|
+|4. Multiple Regression Analysis: Inference (Hypothesis Testing) | [Chapter 4](Lecture/L4/L4_Multiple_Regression_Hypothesis.pdf)|HW3_pdf ; HW3_RMD (Coming soon)
+|~5. Multiple Regression Analysis: OLS Asymptotics~ | ~Chapter 5~|
 |6. Multiple Regression Analysis: Further Issues |  Chapter 6|
 |7. Multiple Regression Analysis with Qualitative Information | Chapter 7|
 |8. (Testing for & Correcting) Heteroskedasticity | Chapter 8|
