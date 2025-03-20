@@ -1,0 +1,137 @@
+---
+title: 'AAEC 4804/5804G, STAT 4804: Fundamentals of Econometrics'
+author: __Your Name Here__
+date: "Spring 2025 -- Homework #3" 
+output: 
+  pdf_document:
+    keep_tex: no
+
+header-includes:
+ \usepackage{float,mathtools} #fixes position of figures
+geometry: margin=0.8in # sets the page margins
+
+---
+
+```{r setup, include=FALSE}
+# Setup chunk reserved for loading packages and setting global options
+library(wooldridge); library(ggplot2); library(dplyr)
+library(stargazer); library(tidyverse);library(patchwork)
+theme_set(theme_light()) # change if you would like.
+knitr::opts_chunk$set(echo=TRUE, fig.pos='H', message=FALSE, warning=FALSE)
+# Report values to 3 decimal places
+options(digits = 3)
+```
+
+# Instructions
+
+This homework is intended to help you review the material covered in Lecture 4. There is a joint emphasis on both the theoretical and practical aspects of the material. **You are strongly encouraged to work with your classmates, but you must submit your own Solutions.**
+
+## Question 1: Impact of hsGPA on college GPA
+
+This question is a derivative of Problem 4 of Chapter 4 in your text (page 155).
+
+We estimated the following model to study the effects pf skipping classes on college GPA:
+\begin{align*}
+\widehat{colGPA} &= \underset{(0.33)}{1.39} + \underset{(0.094)}{0.412} hsGPA + \underset{(0.011)}{0.015} ACT - \underset{(0.026)}{0.083} skipped\\
+n &= 141, \quad R^2 = 0.234
+\end{align*}
+where the variables are as defined in the `gpa1` dataset.
+
+(i) Using the **standard normal approximation**, find the 95% confidence interval (CI) for the effect on hsGPA, $\beta_{hsGPA}$. **For this question, I would like you to walk me through how to manually calculate the confidence interval. Note that, since `n` is large, we can use the `qnorm()` function.**
+
+
+(ii) Using the `confint()` function with the `parm` argument specified, confirm the results you obtained in part (i). **Note: You will need to estimate the model first.**
+
+
+(iii) Given your CI above, can we reject the hypothesis $H_0: \beta_{hsGPA}= 0.4$ against the two-sided alternative at the 5% level? **Explain.**
+
+
+(iv) Again, repeat part (iii) but now test the hypothesis that the marginal effect of $hsGPA$ equal to 1.
+
+
+\newpage
+## Question 2: Rationality of assessment of housing prices
+
+This question is a derivative of Problem 6 of Chapter 4 in your text (page 155). This question is intended to serve as practice for your exam (where you will have to write) so I would like you to type out and walk me through your Solutions. We are not focused on code here. If you need to do computations, you can use your `R` consoles or a calculator.
+
+In the simple regression model
+$$price = \beta_0 + \beta_1 assess + u$$
+the assessment is rational if $\beta_1 = 1$ and $\beta_0 = 0$. The estimated equation is
+\begin{align*}
+\widehat{price} &= \underset{(16.27)}{-14.47} + \underset{(0.049)}{0.976} assess\\
+n &= 88, \; SSR = 165,644.51, \; R^2 = 0.820
+\end{align*}
+
+(i) Walking me through all the relevant components, conduct the single hypotheses tests that: 
+
+(a) $\beta_0 = 0$ against the two-sided alternative at the 5% level. What do you conclude? **Use your t-table approximations.**
+
+
+(b) $\beta_1 = 1$ against the two-sided alternative at the 5% level. What do you conclude? **Use your t-table approximations.**
+
+
+(ii) **Using the approximations from your F-tables at the 5% level**, conduct the joint hypothesis test implied by a rational assessment of housing prices, that is, $\beta_0 = 0$ and $\beta_1 = 1$. No estimation is necessary, but you will need the SSR for this model. I discuss the thought-process in detail below.
+
+  - First, if the assessment is rational: $price = assess + u$. Therefore, the SSR for this restricted  model is $SSR_{r} = \sum_{i=1}^n (price_i - assess_i)^2$. This simply means that we can minus all the assessed prices of each home from the actual prices (getting the residuals). After we square and sum them, we get the SSR.   
+  - Using the steps above, I got an $SSR_r = 209448.99$
+  
+
+
+(iii) The simple linear model is nested by the larger model that included other variables:
+$$price = \beta_0 + \beta_1 assess + \beta_2 lotsize  + \beta_3 sqrft + \beta_4 bdrms + u$$
+With the same 88 houses, the $R^2$ for this larger model is 0.829.
+
+Conduct the joint hypothesis test that $\beta_2 = 0, \beta_3 = 0, \beta_4 = 0$ at the 1% level. **Use the approximations from your F-tables.**
+
+
+
+\newpage
+## Question 3: Re-parameterizing the model
+
+Assume that you have the following model:
+$$y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \beta_3 x_3 + u$$
+Based on some economic theory, you believe that $\beta_1 - 3\beta_2 = 1$ and decided to test this null hypothesis.
+
+(i) Use your notes to write the equation for:
+(a) $var\big(\hat{\beta}_1 - 3\hat{\beta}_2\big)$.
+(b) $se\big(\hat{\beta}_1 - 3\hat{\beta}_2\big)$.
+
+
+
+(ii) Write the equation for the test statistic implied by the null hypothesis.
+
+
+
+(iii) As we noted in class, it is often easier to re-parameterize the model to more directly test the null. For this purpose, define $\theta = \beta_1 - 3\beta_2$ and re-write the model in terms of the parameters $\beta_0, \theta, \beta_2, \beta_3$ to allow us directly obtain $\hat{\theta}$ and $se(\hat{\theta})$. 
+
+
+
+\newpage
+
+## Question 4: Determinants of Housing Prices
+
+Let us revisit the hedonic price model from class. Now, we will use the log of the housing prices as the dependent variable.
+$$log(price) = \beta_0 + \beta_1 sqrft + \beta_2 bdrms + u$$
+
+(i) You are interested in estimating and obtaining a confidence interval for the percentage change in $price$ when a 150-square-foot bedroom is added to the house. In decimal form, that is $\theta_1 = 150\beta_1 + \beta_2$. Use the `hprice1` dataset to estimate $\theta_1$.
+**Hint: I am asking you to estimate the model above and use the relevant coefficients to calculate $\theta_1$.**
+
+
+
+(ii) Write $\beta_2$ in terms of $\theta_1$ and $\beta_1$ and plug this into the log(price) equation.
+
+
+
+(iii) Estimate and report the model results. Next, obtain and report the 90%, 95%, and 99% confidence intervals for $\theta_1$. 
+**Note:**
+- Use the `confint()` function for this part. 
+- In our class notes, I showed how you can use the `lapply()` function to get the confidence intervals across the different levels. (Un)fortunately, this returns a list. You might be more interested in returning your results as a vector or dataframe. You can use the `sapply()` function to do this. 
+  - Use this function to obtain the confidence intervals.
+  - Store the results from the `sapply()` function in an object then use the `rownames()` function to add the row names "Lower" and "Upper" to the results.
+  - Finally, print the results.
+
+
+
+
+
+
