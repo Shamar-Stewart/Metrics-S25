@@ -15,7 +15,7 @@ This is the landing page for Introductory and Fundamental Econometrics. I will u
 |~5. Multiple Regression Analysis: OLS Asymptotics~ | ~Chapter 5~|
 |5. [Multiple Regression Analysis: Further Issues](Lecture/L5/L5_Multiple_Regression_Further_Issues.pdf) |  Chapter 6|
 |6. [Multiple Regression Analysis with Qualitative Information](Lecture/L6/L6_Multiple_Regression_Qualitative_Info.pdf) | Chapter 7|
-|7. (Testing for & Correcting) Heteroskedasticity | Chapter 8|
+|7. [(Testing for & Correcting) Heteroskedasticity](Lecture/L7/L7_Heteroskedasticity.pdf) | Chapter 8|
 |8. Functional Form (Mis)Specification | Chapter 9|
 |**PART II. Regression Analysis with Time Series Data**| |
 |9. Basic Regression Analysis with Time Series Data|  Chapter 10|
