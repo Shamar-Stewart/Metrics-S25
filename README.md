@@ -22,6 +22,6 @@ This is the landing page for Introductory and Fundamental Econometrics. I will u
 |~10. Issues in Using OLS with Time Series Data: Brief Review~ |  ~Chapter 11~|
 |~11. Serial Correlation and Heteroskedasticity in Time Series Regressions~ | ~Chapter 12~|
 |**PART III. Panel Models & IVs**|
-|12. Pooling Cross Sections across Time: Simple Panel Data Methods | Chapter 13|
-|13. Advanced Panel Data Methods: Fixed vs. Random Effect | Chapter 14|
-|14. Instrumental Variables | Chapter 15|                                                               |                                                                   |
+|12. Pooling Cross Sections across Time: Simple Panel Data Methods | Chapter 13|[HW6_pdf](Homework/HW6/AAEC4804_STAT4804_AAEC5804G_HW6-S25_Empty.pdf) ; [HW6_RMD](Homework/HW6/AAEC4804_STAT4804_AAEC5804G_HW6-S25_Empty.Rmd)<br> Due May 2
+|13. Advanced Panel Data Methods: Fixed vs. Random Effect | Chapter 14| **Covered on HW6**
+|~14. Instrumental Variables~ | ~Chapter 15~|                                                               |                                                                   |
