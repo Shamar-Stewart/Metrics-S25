@@ -1,0 +1,20 @@
+###############################################################
+## This file provides a description of the variables included in
+## the Mexican Sex worker dataset
+###############################################################
+
+## Sex Worker Characteristics
+(i) age
+(ii) attractive: 1 = if the worker is considered attractive by the buyer
+(iii) school: 1 = if the worker has completed high school or higher
+
+## Client Characteristics
+(i) regular: 1 = if the client is a regular
+(ii) rich: 1 = if the client is rich
+(iii) alcohol: 1 = if the client consumed alcohol before the transaction
+
+## Transaction Characteristics
+(i) lnprice: log of the price paid for the transaction
+(ii) nocondom: 1 = if a condom was not used during the transaction
+(iii) bar: 1 = if the transaction originated in a bar
+(iv) street: 1 = if the transaction originated on the street
